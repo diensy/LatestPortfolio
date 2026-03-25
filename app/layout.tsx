@@ -16,19 +16,24 @@ export const metadata: Metadata = {
   keywords: SEO_META.keywords,
   authors: [{ name: SEO_META.author }],
   creator: SEO_META.author,
+  icons: {
+    icon: "/Images/Logo/primary logo.png",
+    shortcut: "/Images/Logo/primary logo.png",
+    apple: "/Images/Logo/primary logo.png",
+  },
   openGraph: {
     type: "website",
     url: SEO_META.url,
     title: SEO_META.title,
     description: SEO_META.description,
     siteName: "Dinesh Kumar Sahoo Portfolio",
-    images: [{ url: SEO_META.image, width: 1200, height: 630, alt: SEO_META.title }],
+    images: [{ url: "/Images/Logo/primary logo.png", width: 1200, height: 630, alt: SEO_META.title }],
   },
   twitter: {
     card: "summary_large_image",
     title: SEO_META.title,
     description: SEO_META.description,
-    images: [SEO_META.image],
+    images: ["/Images/Logo/primary logo.png"],
   },
   robots: {
     index: true,
