@@ -4,18 +4,19 @@
 @source "../lib";
 
 @theme {
-  --color-brand-red: #f43f5e;     /* Rose 500 - Premium vibrant primary */
-  --color-brand-red-dark: #e11d48; /* Rose 600 */
-  --color-brand-dark: #09090b;    /* Zinc 950 - Sophisticated dark */
-  --color-brand-surface: #18181b; /* Zinc 900 */
-  --color-brand-card: #27272a;    /* Zinc 800 */
-  --color-brand-border: rgba(255,255,255,0.08); /* Transparent subtle borders */
+  --color-brand-primary: #3B82F6;
+  --color-brand-secondary: #8B5CF6;
+  --color-brand-cyan: #06B6D4;
+  --color-brand-dark: #050816;
+  --color-brand-surface: #0B1120;
+  --color-brand-card: rgba(17, 25, 40, 0.75);
+  --color-brand-border: rgba(255, 255, 255, 0.08);
   --font-sans: "Inter", system-ui, sans-serif;
 }
 
 :root {
-  --background: #09090b;
-  --foreground: #fafafa; /* Zinc 50 */
+  --background: #050816;
+  --foreground: #F8FAFC;
   color-scheme: dark;
 }
 
@@ -32,99 +33,87 @@ body {
 }
 
 @layer base {
-  /* Custom scrollbar - thinner and more elegant */
   ::-webkit-scrollbar {
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #09090b;
+    background: #050816;
   }
   ::-webkit-scrollbar-thumb {
-    background: #27272a;
+    background: #1e293b;
     border-radius: 10px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #3f3f46;
-  }
-
-  /* Hide default cursor on desktop */
-  @media (pointer: fine) {
-    * {
-      cursor: none !important;
-    }
+    background: #334155;
   }
 }
 
-/* Page Loader animation */
+/* Animations */
 @keyframes pulse-glow {
-  0%, 100% { opacity: 1; box-shadow: 0 0 30px rgba(244,63,94,0.4); }
-  50% { opacity: 0.8; box-shadow: 0 0 60px rgba(244,63,94,0.8); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 30px rgba(59, 130, 246, 0.4); }
+  50% { opacity: 0.8; box-shadow: 0 0 60px rgba(139, 92, 246, 0.6); }
 }
 
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; pointer-events: none; }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 @layer components {
-  /* Grid background pattern - softer */
   .grid-bg {
     background-image:
-      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
-  /* Glow utilities */
-  .red-glow {
-    box-shadow: 0 0 40px rgba(244,63,94,0.25);
-  }
-
-  .red-glow-sm {
-    box-shadow: 0 0 20px rgba(244,63,94,0.15);
-  }
-
   .glass-panel {
-    background: rgba(24, 24, 27, 0.4);
+    background: rgba(17, 25, 40, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
   }
 
-  /* Gradient text - elegant premium feel */
+  .primary-glow {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.35);
+  }
+
+  .secondary-glow {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.35);
+  }
+
   .gradient-text {
-    background: linear-gradient(to right, #ffffff, #f43f5e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .gradient-text-subtle {
-    background: linear-gradient(to right, #e4e4e7, #a1a1aa);
+    background: linear-gradient(135deg, #3B82F6, #8B5CF6, #06B6D4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* Section padding */
+  .gradient-btn {
+    background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.35), 0 0 40px rgba(139, 92, 246, 0.25);
+  }
+
   .section-pad {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   @media (min-width: 768px) {
     .section-pad {
-      padding-top: 7rem;
-      padding-bottom: 7rem;
+      padding-top: 9rem;
+      padding-bottom: 9rem;
     }
   }
-}
+
+  .container-pad {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  }
+
+

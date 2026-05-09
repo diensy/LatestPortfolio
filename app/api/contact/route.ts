@@ -39,10 +39,10 @@ export async function POST(req: NextRequest) {
       subject: `Portfolio Contact: New Message from ${name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
-          <h2 style="color: #E63946; border-bottom: 2px solid #E63946; padding-bottom: 10px;">New Message Alert 🚀</h2>
+          <h2 style="color: #3B82F6; border-bottom: 2px solid #3B82F6; padding-bottom: 10px;">New Message Alert 🚀</h2>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
-          <div style="background: #f9f9f9; padding: 15px; border-left: 4px solid #E63946; margin-top: 20px;">
+          <div style="background: #f9f9f9; padding: 15px; border-left: 4px solid #3B82F6; margin-top: 20px;">
             <p style="margin: 0; white-space: pre-wrap;">${message}</p>
           </div>
           <p style="font-size: 12px; color: #888; mt-4">Sent from dineshkumarsahoo.dev contact form</p>
@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
           <p>Thank you for reaching out via my portfolio. I've received your message and will get back to you as soon as possible, usually within 24 hours.</p>
           <p>If your inquiry is urgent, feel free to reach me on WhatsApp: ${PERSONAL.phone}.</p>
           <br/>
-          <p>Best regards,<br/><strong>Dinesh Kumar Sahoo</strong><br/><span style="color: #E63946">Full Stack MERN Developer</span></p>
+          <p>Best regards,<br/><strong>Dinesh Kumar Sahoo</strong><br/><span style="color: #3B82F6">Full Stack MERN Developer</span></p>
         </div>
       `,
     };

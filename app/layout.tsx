@@ -53,7 +53,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${inter.variable} antialiased bg-zinc-950 text-zinc-50 selection:bg-rose-500/30`}>
+      <body className={`${inter.variable} antialiased bg-brand-dark text-zinc-50 selection:bg-blue-500/30`}>
         {children}
         <Toaster
           position="bottom-right"
@@ -65,7 +65,7 @@ export default function RootLayout({
               borderRadius: "12px",
             },
             success: {
-              iconTheme: { primary: "#f43f5e", secondary: "#fff" },
+              iconTheme: { primary: "#3B82F6", secondary: "#fff" },
             },
           }}
         />

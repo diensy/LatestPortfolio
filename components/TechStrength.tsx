@@ -8,10 +8,10 @@ export default function TechStrength() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="tech-strength" className="section-pad bg-[#0a0a0a] relative">
+    <section id="tech-strength" className="section-pad bg-brand-dark relative">
       <div className="max-w-4xl mx-auto px-6" ref={ref}>
-        <div className="text-center mb-16">
-          <h2 className="text-sm font-bold tracking-widest text-[#E63946] uppercase mb-3">
+        <div className="text-center mb-24">
+          <h2 className="text-sm font-bold tracking-widest text-[#3B82F6] uppercase mb-3">
             Proficiency
           </h2>
           <h3 className="text-3xl sm:text-4xl font-black">
@@ -27,14 +27,14 @@ export default function TechStrength() {
             <div key={tech.label} className="w-full">
               <div className="flex justify-between items-end mb-2">
                 <span className="text-white font-medium text-sm md:text-base">{tech.label}</span>
-                <span className="text-[#E63946] font-mono text-sm">{tech.percentage}%</span>
+                <span className="text-[#3B82F6] font-mono text-sm">{tech.percentage}%</span>
               </div>
-              <div className="h-3 w-full bg-[#161616] rounded-full overflow-hidden border border-[#222]">
+              <div className="h-3 w-full bg-[#161616] rounded-full overflow-hidden border border-brand-border">
                 <motion.div
                   initial={{ width: 0 }}
                   animate={isInView ? { width: `${tech.percentage}%` } : { width: 0 }}
                   transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
-                  className="h-full bg-gradient-to-r from-[#E63946] to-[#ff6b7a] rounded-full relative"
+                  className="h-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] rounded-full relative"
                 >
                   {/* Highlight sheen */}
                   <div className="absolute top-0 left-0 right-0 h-1/2 bg-white/20 rounded-t-full" />

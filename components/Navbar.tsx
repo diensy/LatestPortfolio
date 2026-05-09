@@ -27,7 +27,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
         scrolled
-          ? "bg-zinc-950/80 backdrop-blur-xl border-b border-white/5 shadow-xl"
+          ? "bg-brand-dark/80 backdrop-blur-xl border-b border-white/5 shadow-xl"
           : "bg-transparent py-4"
       }`}
     >
@@ -38,7 +38,7 @@ export default function Navbar() {
           className="flex items-center gap-2 group"
           aria-label="Go to top"
         >
-          <div className="w-9 h-9 bg-rose-600 rounded-lg flex items-center justify-center text-white font-black text-sm group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(225,29,72,0.4)]">
+          <div className="w-9 h-9 bg-purple-500 rounded-lg flex items-center justify-center text-white font-black text-sm group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.4)]">
             DK
           </div>
           <span className="text-white font-semibold text-sm hidden sm:block">
@@ -47,15 +47,15 @@ export default function Navbar() {
         </button>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-12">
           {NAV_LINKS.map((link) => (
             <button
               key={link.label}
               onClick={() => scrollTo(link.href)}
-              className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group"
+              className="text-sm font-medium text-brand-subtext hover:text-white transition-colors relative group"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-rose-500 group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-500 group-hover:w-full transition-all duration-300" />
             </button>
           ))}
         </div>
@@ -64,7 +64,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <button
             onClick={() => scrollTo("#contact")}
-            className="px-6 py-2.5 bg-rose-600 hover:bg-rose-500 text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(244,63,94,0.4)]"
+            className="px-6 py-2.5 gradient-btn text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:scale-105"
           >
             Hire Me
           </button>
@@ -72,7 +72,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-zinc-400 hover:text-white p-2 transition-colors"
+          className="md:hidden text-brand-subtext hover:text-white p-2 transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -87,7 +87,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-zinc-950/95 backdrop-blur-xl border-b border-white/5"
+            className="md:hidden bg-brand-dark/95 backdrop-blur-xl border-b border-white/5"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {NAV_LINKS.map((link) => (
@@ -101,7 +101,7 @@ export default function Navbar() {
               ))}
               <button
                 onClick={() => scrollTo("#contact")}
-                className="px-4 py-3 bg-rose-600 hover:bg-rose-500 text-white text-sm font-semibold rounded-xl text-center mt-2 shadow-lg"
+                className="px-4 py-3 gradient-btn text-white text-sm font-semibold rounded-xl text-center mt-2"
               >
                 Hire Me
               </button>

@@ -5,17 +5,16 @@
 
 // ─── COLOR PALETTE ──────────────────────────────────────────
 export const COLORS = {
-  RED: "#f43f5e",        // Rose 500
-  RED_DARK: "#e11d48",   // Rose 600
-  RED_GLOW: "rgba(244, 63, 94, 0.25)",
-  DARK: "#09090b",       // Zinc 950
-  DARK_SURFACE: "#18181b",// Zinc 900
-  DARK_CARD: "#27272a",   // Zinc 800
+  PRIMARY: "#3B82F6",      // Blue 500
+  SECONDARY: "#8B5CF6",    // Purple 500
+  CYAN: "#06B6D4",         // Cyan 500
+  DARK: "#050816",         // Dark Navy
+  DARK_SURFACE: "#0B1120", // Slightly lighter navy
+  DARK_CARD: "rgba(17, 25, 40, 0.75)", // Glass card
   DARK_BORDER: "rgba(255, 255, 255, 0.08)",
-  GRAY: "#a1a1aa",       // Zinc 400
-  GRAY_LIGHT: "#e4e4e7", // Zinc 200
-  WHITE: "#fafafa",      // Zinc 50
-  WHITE_MUTED: "#f4f4f5", // Zinc 100
+  TEXT: "#F8FAFC",         // Off-white
+  SUBTEXT: "#94A3B8",      // Gray
+  WHITE: "#fafafa",
 };
 
 // ─── SEO METADATA ───────────────────────────────────────────
@@ -122,7 +121,7 @@ export const EDUCATION = [
     degree: "Bachelor of Science in Chemistry",
     school: "Mahavidyalaya Parjang, Dhenkanal",
     period: "Jun 2020 – Jul 2023",
-    description: "Developed strong analytical thinking and research methodologies.",
+    description: "Studied core concepts of Organic, Inorganic, and Physical Chemistry along with practical laboratory work.",
   },
   {
     degree: "Higher Secondary (12th)",
@@ -199,7 +198,7 @@ export const PROJECTS = [
     id: "orocast",
     title: "Orocast – OTT Streaming Platform",
     emoji: "🔴",
-    color: COLORS.RED,
+    color: COLORS.PRIMARY,
     shortDesc:
       "Full-stack OTT ecosystem spanning User streaming app, Store (admin CMS), and Admin panel — with subscriptions, live streams, e-commerce, and more.",
     description:
@@ -246,11 +245,11 @@ export const PROJECTS = [
       { label: "Store", url: "https://app.orocast.com/" },
       { label: "Admin", url: "https://admin.orocast.com/" },
     ],
-    bgGradient: "from-rose-950/40 to-transparent",
+    bgGradient: "from-emerald-950/40 to-transparent",
     panels: [
       {
         label: "User App",
-        color: "#E63946",
+        color: "#3B82F6",
         description: "The end-user OTT streaming app — browse movies, TV shows, live streams, watchlists, playlists, cast pages, blog, merch store, and subscription flows.",
         images: [
           "/Images/Orocast/User/Screenshot_26-3-2026_03335_oasys.orocast.com.jpeg",
@@ -301,7 +300,7 @@ export const PROJECTS = [
     id: "podixa",
     title: "Podixa – Audiobook & PDF Platform",
     emoji: "🟢",
-    color: "#10b981",
+    color: "#3B82F6",
     shortDesc:
       "Digital audiobook and PDF reading platform with content management.",
     description:
@@ -322,6 +321,31 @@ export const PROJECTS = [
     tech: ["React", "Node.js", "MongoDB", "Express"],
     links: [{ label: "Live App", url: "https://www.podixa.com/" }],
     bgGradient: "from-emerald-950/40 to-transparent",
+    panels: [
+      {
+        label: "User Interface",
+        color: "#3B82F6",
+        description: "The digital reading and listening interface for browsing audiobooks and PDFs.",
+        images: [
+          "/Images/Podixa/Screenshot_9-5-2026_233623_www.podixa.com.jpeg",
+          "/Images/Podixa/Screenshot_9-5-2026_233754_www.podixa.com.jpeg",
+          "/Images/Podixa/Screenshot_9-5-2026_233812_www.podixa.com.jpeg",
+          "/Images/Podixa/Screenshot_9-5-2026_233831_www.podixa.com.jpeg",
+          "/Images/Podixa/Screenshot_9-5-2026_233923_www.podixa.com.jpeg",
+        ],
+      },
+      {
+        label: "Admin Panel",
+        color: "#10b981",
+        description: "Comprehensive management panel for publishers to manage audiobooks, PDFs, and categories.",
+        images: [
+          "/Images/Podixa/Screenshot_9-5-2026_234530_admin.podixa.com.jpeg",
+          "/Images/Podixa/Screenshot_9-5-2026_234551_admin.podixa.com.jpeg",
+          "/Images/Podixa/Screenshot_9-5-2026_234612_admin.podixa.com.jpeg",
+          "/Images/Podixa/Screenshot_9-5-2026_23462_admin.podixa.com.jpeg",
+        ],
+      }
+    ],
   },
   {
     id: "healistock",
@@ -338,11 +362,11 @@ export const PROJECTS = [
       "Integrated AWS S3 for cloud-based asset management and secure file sharing",
       "Multi-format data exports (Excel/PDF) for vital inventory and compliance reports",
       "Automated recurring inventory reports using FullCalendar and Node.js cron jobs",
-      "Implemented disposal compliance with is_disposed flags keeping operational views clean",
-      "AI-powered insights using OpenAI API for demand forecasting and stock recommendations",
+      "Engineered a domain-specific AI Assistant focused exclusively on inventory insights, demand forecasting, and stock optimization using OpenAI.",
     ],
     features: [
       "🔐 Secure Auth & RBAC (CASL)",
+      "🤖 Context-Aware AI Inventory Assistant",
       "⚡ Real-Time Sync (Socket.io)",
       "📊 Interactive Dashboards (ApexCharts)",
       "☁️ Cloud Asset Management (AWS S3)",
@@ -435,6 +459,21 @@ export const PROJECTS = [
       { label: "Admin Panel", url: "https://restaurantadminui.icodexa.com/" },
     ],
     bgGradient: "from-amber-950/40 to-transparent",
+    panels: [
+      {
+        label: "Store Panel",
+        color: "#eab308",
+        description: "The management interface for restaurant owners to handle menu, tables, and reservations.",
+        images: [
+          "/Images/Food Order/Screenshot_9-5-2026_235254_restaurantstoreui.icodexa.com.jpeg",
+          "/Images/Food Order/Screenshot_9-5-2026_235310_restaurantstoreui.icodexa.com.jpeg",
+          "/Images/Food Order/Screenshot_9-5-2026_235324_restaurantstoreui.icodexa.com.jpeg",
+          "/Images/Food Order/Screenshot_9-5-2026_235334_restaurantstoreui.icodexa.com.jpeg",
+          "/Images/Food Order/Screenshot_9-5-2026_235441_restaurantstoreui.icodexa.com.jpeg",
+          "/Images/Food Order/Screenshot_9-5-2026_235457_restaurantstoreui.icodexa.com.jpeg",
+        ],
+      }
+    ],
   },
   {
     id: "iptv-app",
@@ -518,6 +557,104 @@ export const PROJECTS = [
       },
     ],
   },
+  {
+    id: "book-vault",
+    title: "Book Vault – Inventory & Billing",
+    emoji: "📦",
+    color: "#3B82F6",
+    shortDesc: "Full-stack Inventory Management System with real-time tracking, billing, and Stripe integration.",
+    description: "Book Vault is a production-grade Inventory Management System designed to streamline stock tracking, product management, and billing operations. It features real-time stock monitoring, automated invoice generation, and secure payment processing via Stripe, all accessible through a responsive business dashboard.",
+    impact: [
+      "Built an end-to-end billing and invoice generation system for streamlined operations",
+      "Integrated Stripe for secure, real-time payment processing and order status tracking",
+      "Implemented a comprehensive product & category management system with CRUD optimizations",
+      "Developed an analytical dashboard providing real-time stock monitoring and business reports",
+    ],
+    features: [
+      "🔄 Real-time stock tracking",
+      "🧾 Billing & Invoice generation",
+      "💳 Stripe Payment Integration",
+      "🔐 RBAC & JWT Authentication",
+      "📊 Business Analytics Dashboard",
+      "📦 Category & Supplier Management",
+    ],
+    tech: ["Next.js", "Node.js", "Express", "MongoDB", "Stripe", "JWT", "Tailwind CSS"],
+    links: [
+      { label: "Live App", url: "https://inventory-clinet.vercel.app/" },
+    ],
+    bgGradient: "from-blue-950/40 to-transparent",
+    panels: [
+      {
+        label: "Vendor Panel (Admin)",
+        color: "#3B82F6",
+        description: "Comprehensive management dashboard for vendors to manage inventory, tracking stock, and handle billing.",
+        images: [
+          "/Images/Book Vault/Screenshot_10-5-2026_02816_inventory-clinet.vercel.app.jpeg",
+          "/Images/Book Vault/Screenshot_10-5-2026_02827_inventory-clinet.vercel.app.jpeg",
+          "/Images/Book Vault/Screenshot_10-5-2026_0285_inventory-clinet.vercel.app.jpeg",
+          "/Images/Book Vault/Screenshot_10-5-2026_02923_inventory-clinet.vercel.app.jpeg",
+          "/Images/Book Vault/Screenshot_10-5-2026_02932_inventory-clinet.vercel.app.jpeg",
+          "/Images/Book Vault/Screenshot_10-5-2026_0298_inventory-clinet.vercel.app.jpeg",
+        ],
+      },
+      {
+        label: "User Interface",
+        color: "#10b981",
+        description: "Client-facing interface for browsing inventory, checking order status, and secure checkout via Stripe.",
+        images: [
+          "/Images/Book Vault/Screenshot_10-5-2026_02651_inventory-clinet.vercel.app.jpeg",
+          "/Images/Book Vault/Screenshot_10-5-2026_02725_inventory-clinet.vercel.app.jpeg",
+          "/Images/Book Vault/Screenshot_10-5-2026_02737_inventory-clinet.vercel.app.jpeg",
+          "/Images/Book Vault/Screenshot_10-5-2026_02752_inventory-clinet.vercel.app.jpeg",
+          "/Images/Book Vault/Screenshot_10-5-2026_0300_inventory-clinet.vercel.app.jpeg",
+          "/Images/Book Vault/Screenshot_10-5-2026_03016_inventory-clinet.vercel.app.jpeg",
+        ],
+      }
+    ],
+  },
+  {
+    id: "audit-proo",
+    title: "Audit Proo – Enterprise Compliance",
+    emoji: "🛡️",
+    color: "#06B6D4",
+    shortDesc: "Scalable enterprise Audit Management Platform for compliance workflows and reporting.",
+    description: "Audit Proo is an enterprise-level platform designed to streamline compliance workflows, audit tracking, and operational monitoring. It enables organizations to manage complex audits through centralized dashboards, workflow automation, and structured reporting systems with granular role-based access control.",
+    impact: [
+      "Engineered a scalable multi-user collaboration system for enterprise audit teams",
+      "Automated compliance workflows reducing manual tracking efforts for organizations",
+      "Delivered real-time reporting dashboards for structured operational monitoring",
+      "Implemented granular RBAC to ensure secure data management across user roles",
+    ],
+    features: [
+      "📋 Audit Workflow Management",
+      "✅ Task & Compliance Tracking",
+      "📊 Real-time Reporting Dashboards",
+      "🔐 Enterprise RBAC (Role-Based Access)",
+      "👥 Multi-user Collaboration",
+      "🏢 Operational Monitoring Tools",
+    ],
+    tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS", "Vercel"],
+    links: [
+      { label: "Live App", url: "https://auditproov2.icodexa.com/" },
+    ],
+    bgGradient: "from-cyan-950/40 to-transparent",
+    panels: [
+      {
+        label: "Enterprise Dashboard",
+        color: "#06B6D4",
+        description: "A centralized audit management interface featuring workflow automation, task tracking, and real-time compliance reporting.",
+        images: [
+          "/Images/AuditProo/Screenshot_10-5-2026_03338_auditproov2.icodexa.com.jpeg",
+          "/Images/AuditProo/Screenshot_10-5-2026_03350_auditproov2.icodexa.com.jpeg",
+          "/Images/AuditProo/Screenshot_10-5-2026_03428_auditproov2.icodexa.com.jpeg",
+          "/Images/AuditProo/Screenshot_10-5-2026_03438_auditproov2.icodexa.com.jpeg",
+          "/Images/AuditProo/Screenshot_10-5-2026_03452_auditproov2.icodexa.com.jpeg",
+          "/Images/AuditProo/Screenshot_10-5-2026_03632_auditproov2.icodexa.com.jpeg",
+          "/Images/AuditProo/Screenshot_10-5-2026_03642_auditproov2.icodexa.com.jpeg",
+        ],
+      },
+    ],
+  },
 ];
 
 // ─── WHAT I CAN BUILD ────────────────────────────────────────
@@ -575,5 +712,29 @@ export const WHY_CHOOSE_ME = [
     icon: "🎯",
     title: "Fast Delivery",
     desc: "Clean, structured code shipped on schedule with clear communication",
+  },
+
+];
+// ─── MY WORKFLOW ─────────────────────────────────────────────
+export const WORKFLOW = [
+  {
+    step: "01",
+    title: "Discovery & Strategy",
+    desc: "Understanding your business goals, target audience, and project requirements to create a roadmap for success.",
+  },
+  {
+    step: "02",
+    title: "Architecture & Design",
+    desc: "Planning the database schema, API structure, and UI/UX flows to ensure scalability and a seamless user experience.",
+  },
+  {
+    step: "03",
+    title: "Development & Testing",
+    desc: "Writing clean, modular code with modern technologies, followed by rigorous testing for performance and security.",
+  },
+  {
+    step: "04",
+    title: "Deployment & Growth",
+    desc: "Launching the product on optimized infrastructure and providing ongoing support to help your business scale.",
   },
 ];

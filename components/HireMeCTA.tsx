@@ -10,10 +10,10 @@ export default function HireMeCTA() {
   };
 
   return (
-    <section className="py-24 bg-zinc-950 relative border-y border-white/5 overflow-hidden">
+    <section className="py-24 bg-brand-dark relative border-y border-white/5 overflow-hidden">
       {/* Background glow effects */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-full max-w-3xl h-[200px] bg-rose-600 opacity-10 blur-[120px] rounded-[100%]" />
+        <div className="w-full max-w-3xl h-[200px] bg-purple-500 opacity-10 blur-[120px] rounded-[100%]" />
       </div>
 
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
@@ -23,7 +23,7 @@ export default function HireMeCTA() {
            viewport={{ once: true, margin: "-100px" }}
            transition={{ duration: 0.5 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 glass-panel shadow-lg text-white text-sm font-medium mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 glass-panel shadow-lg text-white text-sm font-medium mb-12">
             <span className="text-xl">🚀</span> Let&apos;s Build Your Next Project
           </div>
           
@@ -32,14 +32,14 @@ export default function HireMeCTA() {
             <span className="gradient-text">scalable product?</span>
           </h2>
           
-          <p className="text-zinc-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-brand-subtext text-lg md:text-xl mb-16 max-w-2xl mx-auto leading-relaxed">
             I specialize in SaaS, streaming platforms, and complex web apps. Let&apos;s discuss your requirements and build something amazing together.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <button
               onClick={() => scrollTo("#contact")}
-              className="px-8 py-4 bg-rose-600 hover:bg-rose-500 text-white font-bold rounded-2xl w-full sm:w-auto transition-all flex items-center justify-center gap-3 hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(244,63,94,0.4)]"
+              className="px-8 py-4 gradient-btn text-white font-bold rounded-2xl w-full sm:w-auto transition-all flex items-center justify-center gap-3 hover:-translate-y-1"
             >
               Hire Me Now <ArrowRight size={20} />
             </button>
@@ -47,9 +47,9 @@ export default function HireMeCTA() {
               href={SOCIAL_LINKS.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-zinc-900 border border-white/10 hover:border-emerald-500/50 hover:bg-zinc-800 text-white font-bold rounded-2xl w-full sm:w-auto transition-all flex items-center justify-center gap-3 hover:-translate-y-1 shadow-lg"
+              className="px-8 py-4 bg-brand-surface border border-white/10 hover:border-blue-500/50 hover:bg-[#151b2b] text-white font-bold rounded-2xl w-full sm:w-auto transition-all flex items-center justify-center gap-3 hover:-translate-y-1 shadow-lg"
             >
-              <MessageSquare size={20} className="text-emerald-500" /> WhatsApp Me
+              <MessageSquare size={20} className="text-blue-500" /> WhatsApp Me
             </a>
           </div>
         </motion.div>
